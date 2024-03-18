@@ -27,12 +27,10 @@ public class MainActivity extends AppCompatActivity {
     public void switchToAddUser(View view) {
         Intent intent = new Intent(this, AddUserActivity.class);
         startActivity(intent);
-
     }
 
     public void switchToRecycleView(View view) {
         Intent intent = new Intent(this, ListUserInRecycleViewActivity.class);
         startActivity(intent);
-
     }
 }

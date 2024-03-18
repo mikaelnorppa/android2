@@ -3,8 +3,9 @@ package com.example.myapplication;
 import java.util.ArrayList;
 
 public class UserStorage {
-    private ArrayList<User> users = new ArrayList<>();
     private static UserStorage storage = null;
+
+    private ArrayList<User> users = new ArrayList<>();
 
     private UserStorage() {
     }

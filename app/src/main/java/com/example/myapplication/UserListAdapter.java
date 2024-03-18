@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class UserListAdapter extends RecyclerView.Adapter<UserViewHolder> {
 
     private Context context;
-    private ArrayList<User> users = new ArrayList<>();
+    private ArrayList<User> users;
 
     public UserListAdapter(Context context, ArrayList<User> users) {
         this.context = context;
@@ -22,7 +22,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserViewHolder> {
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new UserViewHolder(LayoutInflater.from(context).inflate(R.layout.userviewholder, parent, false));
+        return new UserViewHolder(LayoutInflater.from(context).inflate(R.layout.activity_user_view_holder, parent, false));
     }
 
     @Override

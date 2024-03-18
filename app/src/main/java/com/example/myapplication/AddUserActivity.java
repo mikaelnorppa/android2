@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.text.BreakIterator;
+
 public class AddUserActivity extends AppCompatActivity {
 
     @Override
@@ -25,18 +27,13 @@ public class AddUserActivity extends AppCompatActivity {
         });
     }
 
-    EditText editFirstName = findViewById(R.id.editFirstName);
-    EditText editLastName = findViewById(R.id.editLastName);
-    EditText editEmail = findViewById(R.id.editEmail);
-
-    RadioGroup radioDegreeProgram = findViewById(R.id.radioDegreeProgram);
-
 
     public void addUser(View view) {
-        String firstName = editFirstName.getText().toString();
-        String lastName = editLastName.getText().toString();
-        String email = editEmail.getText().toString();
-        String degreeProgram = null;
+        EditText editFirstName = findViewById(R.id.editFirstName);
+        EditText editLastName = findViewById(R.id.editLastName);
+        EditText editEmail = findViewById(R.id.editEmail);
+        RadioGroup radioDegreeProgram = findViewById(R.id.radioDegreeProgram);
+        String degreeProgram = "";
 
 
 
@@ -49,7 +46,8 @@ public class AddUserActivity extends AppCompatActivity {
         } else if (radioDegreeProgram.getCheckedRadioButtonId() == R.id.eeRadioButton) {
                 degreeProgram = "Electrical engineering";
         }
-        UserStorage.getInstance().addUser(new User(firstName, lastName, email, degreeProgram));
+        User newUser = new User(editFirstName.getText().toString(),editLastName.getText().toString(),editEmail.getText().toString(), degreeProgram);
+
     }
 
 }

@@ -1,10 +1,10 @@
 package com.example.myapplication;
 
 public class User {
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String degreeProgram;
+    String firstName;
+    String lastName;
+    String email;
+    String degreeProgram;
 
 
     public User(String firstName, String lastName, String email, String degreeProgram) {
